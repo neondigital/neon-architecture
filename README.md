@@ -2,7 +2,7 @@
 An architecture for building Laravel applications, taking influence from the IODA Architecture
 
 
-Add `Neondigital\NeonArchitecture\Contracts\CanRun` trait to your controllers, or just add to base controller ;-)
+Add `Neondigital\NeonArchitecture\Traits\RunActions` trait to your controllers, or just add to base controller ;-)
 
 ## Artisan Commands
 
