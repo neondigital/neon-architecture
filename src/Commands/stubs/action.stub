@@ -2,7 +2,9 @@
 
 namespace DummyNamespace;
 
-class DummyClass
+use Neondigital\NeonArchitecture\Actions\BaseAction;
+
+class DummyClass extends BaseAction
 {
     /**
      * Create a new action instance.

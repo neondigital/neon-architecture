@@ -2,31 +2,32 @@
 
 namespace Neondigital\NeonArchitecture\Commands;
 
+use Str;
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 
-class ActionMakeCommand extends GeneratorCommand
+class ProcessMakeCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:action {name : e.g. GetOrderAction} {domain : e.g. Inventory}';
+    protected $signature = 'make:process {name : e.g. PlaceOrderProcess} {folder?}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new action class';
+    protected $description = 'Create a new process class';
 
     /**
      * The type of class being generated.
      *
      * @var string
      */
-    protected $type = 'Action';
+    protected $type = 'Process';
 
     /**
      * Get the stub file for the generator.
@@ -35,7 +36,7 @@ class ActionMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/action.stub';
+        return __DIR__.'/stubs/process.stub';
     }
 
     /**
@@ -46,7 +47,11 @@ class ActionMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\\Domains\\' . $this->getDomainInput();
+        if ($this->getFolderInput()) {
+            return $rootNamespace.'\Processes\\' . Str::studly($this->getFolderInput());
+        } else {
+            return $rootNamespace.'\Processes';
+        }
     }
 
     /**
@@ -54,8 +59,8 @@ class ActionMakeCommand extends GeneratorCommand
      *
      * @return string
      */
-    protected function getDomainInput()
+    protected function getFolderInput()
     {
-        return trim($this->argument('domain'));
+        return trim($this->argument('folder'));
     }
 }

@@ -2,7 +2,9 @@
 
 namespace DummyNamespace;
 
-class DummyClass
+use Neondigital\NeonArchitecture\Processes\BaseProcess;
+
+class DummyClass extends BaseProcess
 {
     /**
      * Create a new action instance.

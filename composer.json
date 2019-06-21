@@ -7,5 +7,17 @@
             "email": "glenn@neondigital.co.uk"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Neondigital\\NeonArchitecture\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Neondigital\\NeonArchitecture\\NeonServiceProvider"
+            ]
+        }
+    }
 }
