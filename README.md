@@ -12,6 +12,22 @@ php artisan make:action LoadOrderAction Orders
 php artisan make:process PlaceOrder Orders
 ```
 
+## Run stuff
+
+```
+class ExampleController extends Controller
+{
+    use RunActions;
+
+    public function index()
+    {
+        return $this->run(new \App\Processes\Orders\PlaceOrder);
+    }
+
+```
+
+
+
 ---
 
 ## Random thoughts that need writing up properly!
