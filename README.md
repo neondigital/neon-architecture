@@ -2,6 +2,15 @@
 An architecture for building Laravel applications, taking influence from the IODA Architecture
 
 
+## Artisan Commands
+
+``
+php artisan make:action LoadOrderAction Orders
+
+php artisan make:process PlaceOrder Orders
+```
+
+
 ```
 
 app
