@@ -63,4 +63,20 @@ class ProcessMakeCommand extends GeneratorCommand
     {
         return trim($this->argument('folder'));
     }
+
+    /**
+     * Get the desired class name from the input.
+     *
+     * @return string
+     */
+    protected function getNameInput()
+    {
+        $name = trim($this->argument('name'));
+
+        if (config('neon-architecture.suffix_processes', true)) {
+            $name .= "Process";
+        }
+
+        return $name;
+    }
 }

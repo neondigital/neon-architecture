@@ -21,6 +21,10 @@ class NeonServiceProvider extends ServiceProvider
                 ProcessMakeCommand::class,
             ]);
         }
+
+        $this->publishes([
+            __DIR__.'/config/neon-architecture.php' => config_path('neon-architecture.php'),
+        ]);
     }
 
     /**

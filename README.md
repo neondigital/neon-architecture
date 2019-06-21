@@ -12,6 +12,10 @@ php artisan make:action LoadOrderAction Orders
 php artisan make:process PlaceOrder Orders
 ```
 
+You can customise the suffixing of generated classes by publishing the config file.
+`php artisan vendor:publish --provider="Neondigital\NeonArchitecture\NeonServiceProvider"`
+
+
 ## Run stuff
 
 ```
@@ -31,6 +35,8 @@ class ExampleController extends Controller
 `Neondigital\NeonArchitecture\Actions\MakeViewAction`
 
 Example usage: `return $this->run(new MakeViewAction('admin.products.index', $products, $breadcrumb, $user));`
+
+
 
 
 ---

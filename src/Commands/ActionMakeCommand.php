@@ -12,7 +12,7 @@ class ActionMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'make:action {name : e.g. GetOrderAction} {domain : e.g. Inventory}';
+    protected $signature = 'make:action {name : e.g. GetOrder} {domain : e.g. Inventory}';
 
     /**
      * The console command description.
@@ -57,5 +57,21 @@ class ActionMakeCommand extends GeneratorCommand
     protected function getDomainInput()
     {
         return trim($this->argument('domain'));
+    }
+
+    /**
+     * Get the desired class name from the input.
+     *
+     * @return string
+     */
+    protected function getNameInput()
+    {
+        $name = trim($this->argument('name'));
+
+        if (config('neon-architecture.suffix_actions', true)) {
+            $name .= "Action";
+        }
+
+        return $name;
     }
 }
