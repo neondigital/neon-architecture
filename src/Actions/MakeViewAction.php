@@ -5,18 +5,17 @@ namespace Neondigital\NeonArchitecture\Actions;
 class MakeViewAction extends BaseAction
 {
     protected $view;
-    protected $data;
+    protected $data = [];
 
     /**
      * Create a new action instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($view, $data = [])
     {
-        $argList = func_get_args();
-        $this->view = $fruit = array_shift($argList);
-        $this->data = $argList;
+        $this->view = $view;
+        $this->data = $data;
     }
 
     /**

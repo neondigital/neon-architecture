@@ -34,7 +34,7 @@ class ExampleController extends Controller
 
 `Neondigital\NeonArchitecture\Actions\MakeViewAction`
 
-Example usage: `return $this->run(new MakeViewAction('admin.products.index', $products, $breadcrumb, $user));`
+Example usage: `return $this->run(new MakeViewAction('admin.products.index', ['products' => $products, 'breadcrumb' => $breadcrumb, 'user' => $user]));`
 
 
 
