@@ -2,7 +2,9 @@
 
 namespace Neondigital\NeonArchitecture\Actions;
 
-class BaseAction
+use Neondigital\NeonArchitecture\Contracts\CanRun;
+
+abstract class BaseAction implements CanRun
 {
     //
 }

@@ -21,7 +21,7 @@ class DummyClass extends BaseAction
      *
      * @return void
      */
-    public function handle()
+    public function act()
     {
         // An action does one thing only
         // And must NOT call other actions or processes

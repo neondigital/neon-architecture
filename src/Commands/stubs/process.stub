@@ -2,10 +2,13 @@
 
 namespace DummyNamespace;
 
+use \Neondigital\NeonArchitecture\Traits\RunActions;
 use Neondigital\NeonArchitecture\Processes\BaseProcess;
 
 class DummyClass extends BaseProcess
 {
+    use RunActions;
+
     /**
      * Create a new action instance.
      *
@@ -21,7 +24,7 @@ class DummyClass extends BaseProcess
      *
      * @return void
      */
-    public function handle()
+    public function act()
     {
         // Run a series of actions (and other processes) for reusability
     }

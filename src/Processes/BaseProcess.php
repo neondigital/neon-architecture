@@ -2,7 +2,9 @@
 
 namespace Neondigital\NeonArchitecture\Processes;
 
-class BaseProcess
+use Neondigital\NeonArchitecture\Contracts\CanRun;
+
+abstract class BaseProcess implements CanRun
 {
     //
 }
