@@ -10,6 +10,9 @@ php artisan make:action LoadOrderAction Orders
 php artisan make:process PlaceOrder Orders
 ```
 
+---
+
+## Random thoughts that need writing up properly!
 
 ```
 
