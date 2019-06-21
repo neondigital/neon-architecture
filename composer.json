@@ -1,0 +1,11 @@
+{
+    "name": "neondigital/neon-architecture",
+    "description": "An architecture for building Laravel applications, taking influence from the IODA Architecture",
+    "authors": [
+        {
+            "name": "Glenn Jacobs",
+            "email": "glenn@neondigital.co.uk"
+        }
+    ],
+    "require": {}
+}

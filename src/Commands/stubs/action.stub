@@ -1,0 +1,27 @@
+<?php
+
+namespace DummyNamespace;
+
+class DummyClass
+{
+    /**
+     * Create a new action instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Execute the action.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        // An action does one thing only
+        // And must NOT call other actions or processes
+    }
+}
