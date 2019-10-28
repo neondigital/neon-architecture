@@ -7,6 +7,7 @@
             "email": "glenn@neondigital.co.uk"
         }
     ],
+    "license": "MIT",
     "require": {},
     "autoload": {
         "psr-4": {
