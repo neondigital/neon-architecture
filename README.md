@@ -1,4 +1,5 @@
-# NEON Architecture
-An architecture for building Laravel applications, taking influence from the IODA Architecture
+# No longer maintained
+Please use Laravel Actions instead https://laravelactions.com/
 
-For further information, please [check the documentation](https://neondigital.gitbook.io/neon-architecture/)
+# NEON Architecture
+An architecture for building Laravel applications, taking influence from the IODA Architect
